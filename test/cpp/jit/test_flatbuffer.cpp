@@ -155,7 +155,7 @@ TEST(FlatbufferTest, ExtraFiles) {
 
   CompilationOptions options;
   mobile::Module bc = jitModuleToMobile(*module, options);
-  auto buff = save_mobile_module_to_bytes(bc, extra_files);
+  auto buff = save_mobile_module_to_bytes(bc, extra_files, true);
 
   std::unordered_map<std::string, std::string> loaded_extra_files;
   loaded_extra_files["metadata.json"] = "";
